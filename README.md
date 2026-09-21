@@ -185,9 +185,9 @@ and 0.828 with no overlap, so 0.73 sits safely in the middle of it.
 
      Milestone 5. -->
 
-**1.**
+**1.** "I used Claude to recalculate threshhold and best distance amongst my questions and out of scope."
 
-**2.**
+**2.**"I asked Claude to help debug a GitHub push rejection caused by an exposed API key in .env.example. It walked me through amending the commit, but the amend didn't actually remove the old commit from history — I had to reset back to the last clean commit and recommit. I learned, amend doesn't rewrite older commits in the range being pushed."
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
