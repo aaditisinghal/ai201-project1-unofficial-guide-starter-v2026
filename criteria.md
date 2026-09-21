@@ -22,9 +22,11 @@ pipeline earns credit; *"80% seemed reasonable"* does not.
 For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
-**Why this target:**
-<!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+**Why this target:** Each question is answered by one short reply inside one
+thread, so the answer chunk should be findable. I allow one miss because
+question 2 (the 4:30 sunset) is a single sentence at the end of a winter thread,
+and questions 4 and 5 compete with near-duplicate threads (transfer credits vs
+changing major, group project vs late work).
 
 ---
 
@@ -32,9 +34,10 @@ contains the answer.
 
 Every answer the system produces names at least one source document.
 
-**Why this target:**
-<!-- Why all five and not four? What about your setup makes that achievable —
-     or what would have to go wrong for it not to be? -->
+**Why this target:** I mean answers the model actually generates, not gate
+refusals, which have no source to name. It is 5 of 5 rather than 4 because the
+grounding instruction already requires a file name and the output has a
+"Source:" line. For it to fail, the model would have to ignore that instruction.
 
 ---
 
@@ -44,57 +47,45 @@ When I ask a question my documents clearly don't cover, the relevance gate
 stops it and the system returns "I don't have enough information about that" —
 in at least 4 of 5 tries.
 
-<!-- The five questions are the ones in `OUT_OF_SCOPE` at the bottom of
-     `questions.py`, and `run_eval.py` puts them through the gate and writes
-     what happened into your run log. Swap them for your own if you'd rather —
-     just keep five of them, or the "4 of 5" above has nothing to be 4 of. -->
-
-**Why this target:**
-<!-- What did your distances look like when you set the cutoff in Milestone 4?
-     Was there a clean gap, or did the two groups overlap? -->
+**Why this target:** The gate is the only thing that stops a made-up answer to
+an unanswerable question, so I want it strong. I allow one miss because a
+question like the ibuprofen one could share vocabulary with student-life advice
+threads and land inside the cutoff. I will check this against my real distances
+in Milestone 4.
 
 ---
 
 ## 4. Something about your chunks
 
-<!-- YOU WRITE THIS ONE.
+In every chunk in the index (listed with `python app.py chunks -n <total>`),
+(a) none is shorter than 100 characters, (b) none ends mid-sentence, and
+(c) every chunk contains the `THREAD:` title line of the thread it came from.
 
-     How would you know if your chunks were the right size? Name something
-     countable or observable.
-
-     Examples of the right shape — don't copy these, they should come from
-     what you actually saw in Milestone 3:
-       - "At least 4 of 5 sampled chunks read as a complete thought, with no
-          sentence cut in half at either end."
-       - "No chunk is shorter than 200 characters, since anything below that
-          in my corpus turned out to be a heading with no content under it." -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** The starter's fixed 800-character window cuts long threads
+in the middle of a reply and leaves a 2-character fragment on this corpus. A
+reply like "16 is the answer" means nothing without its thread title, so a
+chunk that lost its title can't answer a question alone. I check every chunk,
+not a sample, because the corpus is small and a single bad fragment is enough
+to fail the target. 100 characters is roughly one short reply plus its title.
 
 ---
 
 ## 5. Your choice
 
-<!-- YOU WRITE THIS ONE TOO.
+For all 5 test questions, the file named on the answer's `Source:` line (not the
+"Sources retrieved" list) is the file that contains my `expects` phrase:
+thread_laptop_specs.txt (16GB), thread_winter_advice.txt (4:30),
+thread_roommate_conflict.txt (mediation), thread_transfer_credits.txt
+(staff change), thread_group_project.txt (individual grades).
 
-     Pick something you actually care about getting right. It could be about
-     speed, about refusals, about a particular kind of question your corpus
-     handles badly, about source attribution being correct rather than merely
-     present — anything, as long as it names a number or an observable
-     outcome. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** Criterion 2 only checks that a source is named, not that
+it's the right one. The corpus has near-duplicate threads (transfer credits vs
+changing major, group project vs late work), so a wrong citation is plausible,
+and a confident wrong pointer is worse than a missed retrieval. I set it at
+5 of 5 because each expects phrase appears in exactly one file, so there is no
+legitimate ambiguity to excuse a miss.
 
 ---
-
 <!-- ─────────────────────────────────────────────────────────────────────────
      UNIT 2 — read this before you change anything above.
 
