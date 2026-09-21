@@ -21,62 +21,127 @@
 
 ## What This Does
 
-<!-- Three or four sentences. Which corpus you picked, and the kinds of
-     questions your system answers. Write it for someone who has never seen
-     this repo.
-
-     Milestone 5. -->
+The Unofficial Guide answers questions about student life from the
+`advice_threads` corpus: 23 threads of student replies covering laptops,
+roommates, transfer credits, deadlines, winter and more. You ask a plain
+question, it retrieves the closest thread, and an answer is written from that
+thread with the source file named. Questions the threads don't cover are
+refused by a distance cutoff before the model runs.
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** one whole thread per chunk. The threads in this corpus run
+from about 250 to 830 characters. A thread longer than 1,200 characters
+(`MAX_CHARS` in `chunker.py`) is split at reply boundaries, never mid-reply,
+and a piece shorter than 100 characters (`MIN_CHARS`) is merged into its
+neighbour.
 
-<!-- What about YOUR documents made you pick these numbers? Short posts and
-     long sectioned guides don't want the same chunking, and "800 seemed
-     reasonable" earns nothing. Point at something you noticed when you read
-     the documents in Milestone 1.
+**Overlap:** none for whole threads. If a thread is split, its `THREAD:` title
+is repeated on every piece and the last reply carries over into the next piece
+as overlap.
 
-     If you changed your mind partway through, say so and say why. That's worth
-     more than pretending you got it right first time.
+**Why:** the replies are short and depend on each other ("Both true.",
+"Counterpoint, I sold mine."), so the thread is the smallest unit that makes
+sense on its own. The starter's fixed 800-character window cut three threads
+mid-reply and produced 26 chunks from 23 documents, including fragments such as
+`t.` (2 characters), `nd it's the only reason I got mine back after it was
+taken.`, and `) ---`. My chunker produces 23 chunks, one per thread, and
+`check_chunks.py` reports 0 chunks failing criterion 4 (at least 100
+characters, first line starts with `THREAD:`).
 
-     Milestone 3. -->
+**Trade-off:** a thread like the bike one mixes storage, salt, cost and
+registration in one chunk, so it may match a narrow question less sharply. One
+chunk per reply with the title prepended is a candidate improvement for unit 2.
+
+**Testing the split branch:** the split-and-overlap logic is implemented and
+tested (with the cap lowered to 400 it produced 59 chunks, with titles
+repeated), but it never triggers at the real 1,200 cap on this corpus.
 
 ## Sample Chunks
 
-<!-- Five chunks, pasted as text. Label each one and name the file it came from
-     AND the function that produced it — the grader checks your code against
-     what you claim here.
+Five of the 23 chunks, all produced by `split_documents` in `chunker.py`.
 
-     `python app.py chunks -n 5` prints all three for you. Copy them straight
-     across.
-
-     Milestone 3. -->
-
-**Chunk 1** — source: `` — produced by: ``
+**Chunk 1** — source: `thread_group_project.txt#0` — produced by: `chunker.py::split_documents`
 
 ```
+THREAD: How do you handle a group project where someone disappears?
+
+--- reply 1 (29 votes) ---
+Document early. Not to be difficult — because if you go to the instructor in week 10 with nothing written down, there's nothing they can do.
+
+--- reply 2 (22 votes) ---
+Most instructors here will adjust individual grades if you raise it before the deadline rather than after. After is too late, consistently.
+
+--- reply 3 (16 votes) ---
+Split work into pieces that can be handed off. If one person's part is load-bearing for everyone else, one disappearance sinks it.
 ```
 
-**Chunk 2** — source: `` — produced by: ``
+**Chunk 2** — source: `thread_roommate_conflict.txt#0` — produced by: `chunker.py::split_documents`
 
 ```
+THREAD: Roommate situation isn't working. What now?
+
+--- reply 1 (28 votes) ---
+Talk to your RA early, and frame it as 'we need help sorting this out' rather than 'move me'. Room changes are possible but the process starts with mediation and skipping that step slows it down.
+
+--- reply 2 (14 votes) ---
+Room changes happen at the semester boundary almost always, and mid-semester only in fairly serious cases.
+
+--- reply 3 (33 votes) ---
+Write down specifics before the meeting. 'It's not working' is hard to act on; 'guests four nights a week past 2am' is not.
 ```
 
-**Chunk 3** — source: `` — produced by: ``
+**Chunk 3** — source: `thread_printing.txt#0` — produced by: `chunker.py::split_documents`
 
 ```
+THREAD: Is the printing quota enough?
+
+--- reply 1 (17 votes) ---
+For most people yes. $30 is about 600 pages black and white. It's the colour printing that eats it — eight times the cost per page.
+
+--- reply 2 (11 votes) ---
+Doesn't roll over between semesters. Print your readings in December rather than losing it.
 ```
 
-**Chunk 4** — source: `` — produced by: ``
+**Chunk 4** — source: `thread_meal_plan_tier.txt#0` — produced by: `chunker.py::split_documents`
 
 ```
+THREAD: Which meal plan tier is right?
+
+--- reply 1 (24 votes) ---
+Depends entirely on whether your building has a kitchen. Fenwick has kitchenettes, so people there go down a tier and cook two or three nights. Everywhere else, get the middle tier.
+
+--- reply 2 (19 votes) ---
+The highest tier only makes sense if you eat three meals a day in the halls every single day, which basically nobody does past October.
+
+--- reply 3 (11 votes) ---
+Remember you can only change it once and only in the first ten days. I waited and got stuck on a plan I didn't use.
+
+--- reply 4 (7 votes) ---
+Declining balance rolls within the semester but not between them. Spend it in December or lose it.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
+**Chunk 5** — source: `thread_first_year_regret.txt#0` — produced by: `chunker.py::split_documents`
 
 ```
+THREAD: What do you wish you'd known in first year?
+
+--- reply 1 (41 votes) ---
+That the add/drop deadline and the withdrawal deadline are different dates and only one of them is on the calendar everyone reads.
+
+--- reply 2 (28 votes) ---
+That you can take a course pass/fail and declare it late — up to week eight. I carried a grade I didn't need to.
+
+--- reply 3 (35 votes) ---
+That the writing centre will read a draft for any course, not just writing courses. Free, and the appointments go unbooked.
+
+--- reply 4 (52 votes) ---
+Honestly: that nobody is watching as closely as you think. I spent a year worried about looking like I knew what I was doing.
+
+--- reply 5 (17 votes) ---
+That your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed.
 ```
+ 
 
 ## Sample Answer
 
