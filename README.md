@@ -145,30 +145,34 @@ That your adviser's job is partly to know the exceptions to rules. Ask before as
 
 ## Sample Answer
 
-<!-- One complete question and answer, pasted as text, with the source line
-     visible. Milestone 4. -->
-
-**Question:**
+**Question:** How much RAM do students say is worth paying for in a laptop for CS courses?
 
 **Answer:**
+```
+Students say that 16GB of RAM is the one number worth paying for in a laptop for CS courses.
+
+Source: thread_laptop_specs.txt
 
 ```
-```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.73
 
-<!-- The number you set in config.py, and how you got there.
-
-     You ran five questions your corpus covers and the five in OUT_OF_SCOPE
-     that it clearly doesn't, and wrote down the best distance for each. What
-     did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
-
-     Milestone 4. -->
+The 5 in-corpus best distances range from 0.183 to 0.630. The 5 out-of-scope
+best distances range from 0.828 to 0.952. There's a clean gap between 0.630
+and 0.828 with no overlap, so 0.73 sits safely in the middle of it.
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| How much RAM do students say is worth paying for in a laptop for CS courses? | Yes | 0.183 |
+| What time does it get dark on campus in December? | Yes | 0.630 |
+| What does the process for a room change start with when a roommate situation isn't working? | Yes | 0.265 |
+| What happened to the student who relied on a verbal yes about transfer credits? | Yes | 0.514 |
+| What will most instructors adjust if you raise a disappearing group member early enough? | Yes | 0.370 |
+| What is the capital of Mongolia? | No | 0.948 |
+| How do I change the oil in a diesel engine? | No | 0.930 |
+| Who won the 1994 World Cup? | No | 0.952 |
+| What is the recommended dosage of ibuprofen for a headache? | No | 0.828 |
+| How do I write a for loop in Rust? | No | 0.871 |
 
 ## How I Used AI
 

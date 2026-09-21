@@ -1,0 +1,348 @@
+﻿23 chunks total. Showing 23, spread across the corpus.
+
+Paste these into your README under Sample Chunks. The rubric asks
+for the source file and the function that produced them ù both are
+printed for you below.
+
+======================================================================
+Chunk 1  |  source: thread_bike_commute.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Is a bike worth it for a 20 minute walk commute?
+
+--- reply 1 (14 votes) ---
+Yeah. Cuts an 18 minute walk to about 6. The thing nobody mentions is storage ù covered bike parking exists at three buildings and is full by 9am at all three.
+
+--- reply 2 (9 votes) ---
+Counterpoint, I sold mine. Between November and March the paths are either icy or salted and salt destroys a drivetrain in one season.
+
+--- reply 3 (22 votes) ---
+Both true. I keep a cheap bike for September to November and walk the rest of the year. Total cost was about $120 for the bike and I don't care what happens to it.
+
+--- reply 4 (5 votes) ---
+If you do get one, the campus does free registration and it's the only reason I got mine back after it was taken.
+
+======================================================================
+Chunk 2  |  source: thread_changing_major.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: How hard is it to change major in second year?
+
+--- reply 1 (22 votes) ---
+Administratively trivial ù it's a form. The real question is whether the credits you've taken map onto the new requirements.
+
+--- reply 2 (27 votes) ---
+Depends enormously on the direction. Moving within the sciences is usually fine. Moving into a science from outside in your third year means an extra semester more often than not.
+
+--- reply 3 (19 votes) ---
+Talk to the department adviser for the major you want, not your current one. They know the exceptions.
+
+======================================================================
+Chunk 3  |  source: thread_clubs.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: How many clubs is too many?
+
+--- reply 1 (31 votes) ---
+Two you actually turn up to beats six you signed up for at the fair.
+
+--- reply 2 (24 votes) ---
+The club fair collects about four hundred email addresses per society and maybe thirty people ever appear. Don't feel bad about the signup sheet.
+
+--- reply 3 (18 votes) ---
+If you want a leadership position later, depth in one is worth more than breadth across five.
+
+======================================================================
+Chunk 4  |  source: thread_commuting.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Commuting an hour each way ù is it survivable?
+
+--- reply 1 (26 votes) ---
+Yes, but stack your courses. Three long days beats five short ones by a wide margin.
+
+--- reply 2 (21 votes) ---
+The commuter lounge in the student centre has lockers you can rent for $20 a year and it changes the experience completely.
+
+--- reply 3 (13 votes) ---
+Watch the evening bus timetable before you register for anything that ends after 6pm.
+
+--- reply 4 (17 votes) ---
+I commuted for two years. The thing that made it work was treating the train as study time rather than dead time.
+
+======================================================================
+Chunk 5  |  source: thread_first_gen.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Anything specific for first-generation students?
+
+--- reply 1 (33 votes) ---
+The advising office has a specific programme and it is genuinely good, but it is opt-in and badly publicised. Ask for it by name.
+
+--- reply 2 (41 votes) ---
+The thing I'd say: the unwritten rules are the hard part, not the coursework. Ask about the unwritten rules explicitly. People are happy to explain them and nobody volunteers them.
+
+--- reply 3 (16 votes) ---
+Emergency fund for textbooks and travel exists and is not means-tested beyond a short form.
+
+======================================================================
+Chunk 6  |  source: thread_first_year_regret.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: What do you wish you'd known in first year?
+
+--- reply 1 (41 votes) ---
+That the add/drop deadline and the withdrawal deadline are different dates and only one of them is on the calendar everyone reads.
+
+--- reply 2 (28 votes) ---
+That you can take a course pass/fail and declare it late ù up to week eight. I carried a grade I didn't need to.
+
+--- reply 3 (35 votes) ---
+That the writing centre will read a draft for any course, not just writing courses. Free, and the appointments go unbooked.
+
+--- reply 4 (52 votes) ---
+Honestly: that nobody is watching as closely as you think. I spent a year worried about looking like I knew what I was doing.
+
+--- reply 5 (17 votes) ---
+That your adviser's job is partly to know the exceptions to rules. Ask before assuming a deadline is fixed.
+
+======================================================================
+Chunk 7  |  source: thread_group_project.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: How do you handle a group project where someone disappears?
+
+--- reply 1 (29 votes) ---
+Document early. Not to be difficult ù because if you go to the instructor in week 10 with nothing written down, there's nothing they can do.
+
+--- reply 2 (22 votes) ---
+Most instructors here will adjust individual grades if you raise it before the deadline rather than after. After is too late, consistently.
+
+--- reply 3 (16 votes) ---
+Split work into pieces that can be handed off. If one person's part is load-bearing for everyone else, one disappearance sinks it.
+
+======================================================================
+Chunk 8  |  source: thread_internship_timing.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: When should I start looking for a summer internship?
+
+--- reply 1 (30 votes) ---
+Earlier than feels reasonable. Large employers close applications in October and November for the following summer.
+
+--- reply 2 (25 votes) ---
+Smaller and local places hire in February and March, so if you missed autumn you have not missed everything.
+
+--- reply 3 (19 votes) ---
+The careers office reviews CVs on a drop-in basis and the queue is almost never longer than one person.
+
+======================================================================
+Chunk 9  |  source: thread_laptop_specs.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: How much laptop do I actually need for CS courses?
+
+--- reply 1 (31 votes) ---
+Less than the recommended spec page says. 16GB of RAM is the one number worth paying for; everything else you'll never notice.
+
+--- reply 2 (18 votes) ---
+Adding: the lab machines exist and are better than anything you'll buy. For the heavy assignments people just use those.
+
+--- reply 3 (12 votes) ---
+I did two years on an 8GB machine and it was fine until the last project, at which point it very much wasn't. 16 is the answer.
+
+======================================================================
+Chunk 10  |  source: thread_late_work.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: What actually happens if you hand something in late?
+
+--- reply 1 (20 votes) ---
+Entirely instructor-dependent and the syllabus is accurate. If it says 10% a day, it's 10% a day.
+
+--- reply 2 (47 votes) ---
+The universal rule: ask before the deadline, not after. Almost everyone will give you two days if you ask on Wednesday for a Friday deadline. Almost nobody will on the following Monday.
+
+--- reply 3 (15 votes) ---
+Documented illness goes through the dean of students rather than the instructor, and that route works.
+
+======================================================================
+Chunk 11  |  source: thread_laundry_timing.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: When is laundry actually free in the dorms?
+
+--- reply 1 (27 votes) ---
+Tuesday and Wednesday mornings, every building. Sunday evening is the worst and it isn't close.
+
+--- reply 2 (8 votes) ---
+Depends heavily on your building. Morrow has more machines per person than Fenwick so it's less of a problem there.
+
+--- reply 3 (16 votes) ---
+The app that shows machine availability is wrong about half the time. It reports a machine as free for a few minutes after it finishes but before someone unloads it.
+
+======================================================================
+Chunk 12  |  source: thread_meal_plan_tier.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Which meal plan tier is right?
+
+--- reply 1 (24 votes) ---
+Depends entirely on whether your building has a kitchen. Fenwick has kitchenettes, so people there go down a tier and cook two or three nights. Everywhere else, get the middle tier.
+
+--- reply 2 (19 votes) ---
+The highest tier only makes sense if you eat three meals a day in the halls every single day, which basically nobody does past October.
+
+--- reply 3 (11 votes) ---
+Remember you can only change it once and only in the first ten days. I waited and got stuck on a plan I didn't use.
+
+--- reply 4 (7 votes) ---
+Declining balance rolls within the semester but not between them. Spend it in December or lose it.
+
+======================================================================
+Chunk 13  |  source: thread_office_hours_etiquette.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Is it weird to go to office hours with no specific question?
+
+--- reply 1 (44 votes) ---
+No, and this is the single most common thing first years get wrong. 'I'm following the lectures but I don't feel like I understand the shape of it' is a completely normal thing to say.
+
+--- reply 2 (29 votes) ---
+They're usually empty. You are doing the instructor a favour by turning up.
+
+--- reply 3 (18 votes) ---
+If it helps, treat it as a standing appointment. Go every week for a month and it stops feeling like a thing.
+
+======================================================================
+Chunk 14  |  source: thread_parking.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Worth getting a parking permit?
+
+--- reply 1 (15 votes) ---
+West lots sell out in about three days in August. East lot never sells out but it's a 12 minute walk, at which point you might as well have parked on the street.
+
+--- reply 2 (21 votes) ---
+Street parking on Verrill is legal and free and unmarked, which is why half the upper years do it.
+
+--- reply 3 (8 votes) ---
+If you're commuting daily, the west permit is worth the August scramble. Otherwise don't bother.
+
+======================================================================
+Chunk 15  |  source: thread_pass_fail.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: When should you actually use the pass/fail option?
+
+--- reply 1 (24 votes) ---
+For a course outside your major that you're taking because you're curious. That's what it's for and most people never use it.
+
+--- reply 2 (38 votes) ---
+The part that isn't advertised: you can declare it as late as week eight. So take the midterm first, then decide.
+
+--- reply 3 (20 votes) ---
+Careful with this one if you're applying to graduate programmes. Some want a letter grade for prerequisites and a P doesn't satisfy it.
+
+--- reply 4 (12 votes) ---
+Two per year and eight across the degree. I hit the annual limit in second year and regretted spending one on an easy course.
+
+======================================================================
+Chunk 16  |  source: thread_printing.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Is the printing quota enough?
+
+--- reply 1 (17 votes) ---
+For most people yes. $30 is about 600 pages black and white. It's the colour printing that eats it ù eight times the cost per page.
+
+--- reply 2 (11 votes) ---
+Doesn't roll over between semesters. Print your readings in December rather than losing it.
+
+======================================================================
+Chunk 17  |  source: thread_professor_email.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Do professors actually answer email?
+
+--- reply 1 (21 votes) ---
+Varies enormously. General rule I've found: if the syllabus states a response window, it's honoured. If it doesn't, assume 48 hours and don't panic before then.
+
+--- reply 2 (33 votes) ---
+Office hours are dramatically more effective than email for anything that takes more than two sentences to answer. They're also usually empty.
+
+--- reply 3 (15 votes) ---
+Empty office hours is the biggest unused resource here and I say that having wasted a year not going.
+
+======================================================================
+Chunk 18  |  source: thread_roommate_conflict.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Roommate situation isn't working. What now?
+
+--- reply 1 (28 votes) ---
+Talk to your RA early, and frame it as 'we need help sorting this out' rather than 'move me'. Room changes are possible but the process starts with mediation and skipping that step slows it down.
+
+--- reply 2 (14 votes) ---
+Room changes happen at the semester boundary almost always, and mid-semester only in fairly serious cases.
+
+--- reply 3 (33 votes) ---
+Write down specifics before the meeting. 'It's not working' is hard to act on; 'guests four nights a week past 2am' is not.
+
+======================================================================
+Chunk 19  |  source: thread_sleep_schedule.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Everyone says fix your sleep. Does it actually matter?
+
+--- reply 1 (29 votes) ---
+Yes, and the specific thing that helped me was scheduling no classes before 10am rather than trying to become a morning person.
+
+--- reply 2 (37 votes) ---
+The library being open until 2am is a trap. It's a resource, not a schedule.
+
+--- reply 3 (16 votes) ---
+Counselling runs a short workshop on this that is more practical than it sounds. Four sessions, and it's free.
+
+======================================================================
+Chunk 20  |  source: thread_study_spots.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Best study spots that aren't the library?
+
+--- reply 1 (23 votes) ---
+Ridgeway CafΘ before 10am. Empty, quiet, good coffee, and they don't push you out.
+
+--- reply 2 (19 votes) ---
+The science building has open lounges on floors 2 through 5 that are unlocked and almost always empty.
+
+--- reply 3 (14 votes) ---
+Depends what you need. If you need silence, the library third floor is the only place that reliably delivers it.
+
+--- reply 4 (9 votes) ---
+The group study rooms in the library can be booked by one person and used alone. Nobody checks.
+
+======================================================================
+Chunk 21  |  source: thread_textbook_editions.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Does the edition of the textbook matter?
+
+--- reply 1 (23 votes) ---
+For maths and physics, almost never ù problem numbering shifts and that's it. For anything where the field moves, it can matter a lot.
+
+--- reply 2 (34 votes) ---
+Ask the instructor directly. Most will tell you the previous edition is fine, and they can't put that in the syllabus for procurement reasons.
+
+--- reply 3 (12 votes) ---
+The library reserve copy is always the current edition, so you can check the numbering against yours for free.
+
+======================================================================
+Chunk 22  |  source: thread_transfer_credits.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: Do transfer credits actually count toward the major?
+
+--- reply 1 (20 votes) ---
+Toward general requirements almost always. Toward the major it's case-by-case and the department decides, not the registrar.
+
+--- reply 2 (25 votes) ---
+Get it in writing from the department before you rely on it. I had a verbal yes that didn't survive a staff change.
+
+--- reply 3 (13 votes) ---
+The credit hours count for registration priority and the housing lottery even when they don't count toward the major, which is worth knowing.
+
+======================================================================
+Chunk 23  |  source: thread_winter_advice.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+THREAD: First winter here ù what do I need?
+
+--- reply 1 (26 votes) ---
+Layers, not a big coat. The buildings are overheated and you'll carry a parka around all day.
+
+--- reply 2 (31 votes) ---
+Boots with actual tread. The path past the pond ices over and people go down on it every year.
+
+--- reply 3 (18 votes) ---
+Get a light that clips to your bag. It's dark by 4:30 in December and parts of the walk from Fenwick aren't lit well.
+
+For each one, ask: could someone answer a question using only this,
+without reading what came before or after?
